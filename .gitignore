@@ -1,0 +1,7 @@
+*.egg*
+*.mo
+*.pyc
+.venv
+dist
+ChangeLog
+AUTHORS

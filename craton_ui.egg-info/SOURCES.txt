@@ -12,8 +12,13 @@ craton_dashboard/dashboards/project/fleet/__init__.py
 craton_dashboard/dashboards/project/fleet/panel.py
 craton_dashboard/dashboards/project/fleet/urls.py
 craton_dashboard/dashboards/project/fleet/views.py
+craton_dashboard/dashboards/project/fleet/taskflows/__init__.py
+craton_dashboard/dashboards/project/fleet/taskflows/panel.py
+craton_dashboard/dashboards/project/fleet/taskflows/urls.py
+craton_dashboard/dashboards/project/fleet/taskflows/views.py
 craton_dashboard/enabled/_1710_fleet_panel_group.py
 craton_dashboard/enabled/_1720_fleet_regions_panel.py
+craton_dashboard/enabled/_1730_fleet_taskflows_panel.py
 craton_dashboard/enabled/__init__.py
 craton_ui.egg-info/PKG-INFO
 craton_ui.egg-info/SOURCES.txt

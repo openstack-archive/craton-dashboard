@@ -18,11 +18,10 @@ from django.views import generic
 from horizon import exceptions
 from horizon import forms
 from horizon import tables
-from horizon import views
 
-class IndexView(tables.DataTableView):
-    template_name = 'project/fleet/index.hml'
-    page_title = _('Regions')
+class IndexView(generic.TemplateView):
+    template_name = 'project/fleet/taskflows/templates/index.hml'
+    page_title = _('Taskflows')
 
     def __init__(self, *args, **kwargs):
         super(IndexView, self).__init__(*args, **kwargs)
