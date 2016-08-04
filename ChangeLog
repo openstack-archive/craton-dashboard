@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+* Added base .gitignore
 * Added regions panel
 * Initial Structure
 * Initial commit

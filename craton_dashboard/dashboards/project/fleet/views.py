@@ -16,17 +16,9 @@ from django.utils.translation import ugettext_lazy as _
 from django.views import generic
 
 from horizon import exceptions
-from horizon import forms
-from horizon import tables
-from horizon import views
 
-class IndexView(tables.DataTableView):
-    template_name = 'project/fleet/index.hml'
+class IndexView(generic.TemplateView):
+
+    template_name = 'regions/index.html'
     page_title = _('Regions')
 
-    def __init__(self, *args, **kwargs):
-        super(IndexView, self).__init__(*args, **kwargs)
-        self._more = None
-
-    def get_data(self):
-        return []

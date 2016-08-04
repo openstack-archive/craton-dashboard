@@ -20,5 +20,4 @@ PANEL_DASHBOARD = 'project'
 
 PANEL_GROUP = 'fleet_management'
 
-ADD_PANEL = 'craton_dashboard.dashboards.project.fleeti.taksflows.panel.Taskflows'
-
+ADD_PANEL = 'craton_dashboard.dashboards.project.fleet.taskflows.panel.Taskflows'

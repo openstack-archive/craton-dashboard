@@ -16,6 +16,6 @@ from django.utils.translation import ugettext_lazy as _
 
 import horizon
 
-class Taskflow(horizon.Panel):
+class Taskflows(horizon.Panel):
     name = _('Taskflows')
     slug = 'taskflow'
