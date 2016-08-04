@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: craton-ui
+Version: 0.0.1.dev1
+Summary: The Craton UI for Horizon Dashboard
+Home-page: http://www.openstack.org/
+Author: OSIC
+Author-email: eddie.ramirez@intel.com
+License: UNKNOWN
+Description: Craton UI for Horizon Dashboard
+        
+        
+Platform: UNKNOWN
