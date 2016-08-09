@@ -14,13 +14,12 @@
 
 from django.utils.translation import ugettext_lazy as _
 
-PANEL = 'fleet.taskflows'
+PANEL = 'fleet.reporting'
 
 PANEL_DASHBOARD = 'project'
 
 PANEL_GROUP = 'fleet_management'
 
 ADD_PANEL = (
-    'craton_dashboard.dashboards.project.fleet.taskflows.panel.Taskflows')
-
+    'craton_dashboard.dashboards.project.fleet.reporting.panel.Reporting')
 

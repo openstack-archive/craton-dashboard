@@ -13,13 +13,9 @@
 # under the License.
 
 from django.utils.translation import ugettext_lazy as _
-from django.views import generic
 
-from horizon import exceptions
-from horizon import forms
-from horizon import tables
+import horizon
 
-class IndexView(generic.TemplateView):
-    template_name = 'project/fleet.taskflows/index.html'
-    page_title = _('Taskflows')
-
+class Alerts(horizon.Panel):
+    name = _('Alerts')
+    slug = 'fleet.alerts'

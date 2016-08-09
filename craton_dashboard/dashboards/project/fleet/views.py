@@ -18,7 +18,6 @@ from django.views import generic
 from horizon import exceptions
 
 class IndexView(generic.TemplateView):
-
-    template_name = 'regions/index.html'
+    template_name = 'project/regions/index.html'
     page_title = _('Regions')
 

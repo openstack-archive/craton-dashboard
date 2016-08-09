@@ -23,3 +23,7 @@ PANEL_GROUP = 'fleet_management'
 ADD_PANEL = 'craton_dashboard.dashboards.project.fleet.panel.Regions'
 
 ADD_INSTALLED_APPS = ['craton_dashboard']
+
+ADD_ANGULAR_MODULES = ['horizon.dashboard.project.craton']
+
+AUTO_DISCOVER_STATIC_FILES = True

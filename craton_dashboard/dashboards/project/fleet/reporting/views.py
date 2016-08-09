@@ -20,6 +20,6 @@ from horizon import forms
 from horizon import tables
 
 class IndexView(generic.TemplateView):
-    template_name = 'project/fleet.taskflows/index.html'
-    page_title = _('Taskflows')
+    template_name = 'project/fleet.reporting/index.html'
+    page_title = _('Reporting')
 

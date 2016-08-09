@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+* Added base methods and classes for API
 * Added base .gitignore
 * Added regions panel
 * Initial Structure
