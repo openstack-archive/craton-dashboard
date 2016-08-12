@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+* [WIP] Added code base for unit testing and code refactoring
+* Added some files and stuff
+* dummy test
+* added test
+* Added travis conf file
+* Updated enable files and install instructions
 * Added base methods and classes for API
 * Added base .gitignore
 * Added regions panel
