@@ -14,12 +14,16 @@
 
 from six.moves.urllib import request
 from django.conf import settings
+from cratonclient.v1 import client as craton_client
 
 from horizon import exceptions
 from openstack_dashboard.api import base
 
+
 def cratonclient():
-    pass
+    url = base.url_for(request, 'craton')
+    c = craton_client.Client(session=request.session, url=url)
+    return c
 
 def project_create(request, **kwargs):
     pass
@@ -42,8 +46,9 @@ def region_create(request, **kwargs):
 def region_delete(request, **kwargs):
     pass
 
+
 def region_list(request, **kwargs):
-    pass
+    return cratonclient(request).regions.list(**kwargs)
 
 def region_show(request, **kwargs):
     pass
