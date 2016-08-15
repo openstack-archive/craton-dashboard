@@ -6,3 +6,6 @@ dist
 ChangeLog
 AUTHORS
 craton_ui.egg-info/*
+.cache
+.testrepository
+.tox
