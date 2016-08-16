@@ -16,6 +16,11 @@ from openstack_dashboard.test.test_data import utils
 
 
 def load_test_data(load_onto=None):
+
+    from craton_dashboard.test.test_data import craton_data
+    from craton_dashboard.test.test_data import keystone_data \
+        as craton_keystone_data
+
     from openstack_dashboard.test.test_data import ceilometer_data
     from openstack_dashboard.test.test_data import cinder_data
     from openstack_dashboard.test.test_data import exceptions
@@ -25,10 +30,6 @@ def load_test_data(load_onto=None):
     from openstack_dashboard.test.test_data import neutron_data
     from openstack_dashboard.test.test_data import nova_data
     from openstack_dashboard.test.test_data import swift_data
-
-    from craton_dashboard.test.test_data import keystone_data \
-        as craton_keystone_data
-    from craton_dashboard.test.test_data import craton_data
 
     # The order of these loaders matters, some depend on others.
     loaders = (

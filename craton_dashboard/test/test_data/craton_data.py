@@ -16,6 +16,7 @@ from cratonclient.v1 import regions
 
 from openstack_dashboard.test.test_data import utils
 
+
 def data(TEST):
     URL = 'http://localhost/'
     TEST.craton_regions = utils.TestDataContainer()

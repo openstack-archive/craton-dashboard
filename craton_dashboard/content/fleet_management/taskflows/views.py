@@ -15,11 +15,7 @@
 from django.utils.translation import ugettext_lazy as _
 from django.views import generic
 
-from horizon import exceptions
-from horizon import forms
-from horizon import tables
 
 class IndexView(generic.TemplateView):
     template_name = 'project/fleet.taskflows/index.html'
     page_title = _('Taskflows')
-
