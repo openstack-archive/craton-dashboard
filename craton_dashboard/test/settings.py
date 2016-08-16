@@ -15,3 +15,4 @@ from openstack_dashboard.test.settings import *  # noqa
 
 INSTALLED_APPS = list(INSTALLED_APPS)
 # INSTALLED_APPS.append('craton_dashboard.dashboards.project.fleet.inventory')
+INSTALLED_APPS.append('craton_dashboard.content.fleet_management')

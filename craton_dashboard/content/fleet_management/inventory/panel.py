@@ -16,6 +16,7 @@ from django.utils.translation import ugettext_lazy as _
 
 import horizon
 
+
 class Inventory(horizon.Panel):
     name = _('Inventory')
     slug = 'fleet.inventory'

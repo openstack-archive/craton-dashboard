@@ -39,8 +39,10 @@ class CratonTestsMixin(object):
 class TestCase(CratonTestsMixin, helpers.TestCase):
     pass
 
+
 class BaseAdminViewTests(CratonTestsMixin, helpers.TestCase):
     pass
+
 
 class CratonAPITestCase(CratonTestsMixin, helpers.APITestCase):
     def setUp(self):

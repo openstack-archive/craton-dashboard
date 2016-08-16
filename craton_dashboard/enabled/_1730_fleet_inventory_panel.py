@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from django.utils.translation import ugettext_lazy as _
 
 PANEL = 'fleet.inventory'
 
@@ -22,4 +21,3 @@ PANEL_GROUP = 'fleet_management'
 
 ADD_PANEL = (
     'craton_dashboard.content.fleet_management.inventory.panel.Inventory')
-

@@ -12,95 +12,92 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from django.conf import settings
+
 from django.views import generic
 
 from craton_dashboard.api import craton
 
-
-from openstack_dashboard import api
 from openstack_dashboard.api.rest import urls
 from openstack_dashboard.api.rest import utils as rest_utils
 
-from six.moves.urllib import request
 
 @urls.register
 class Regions(generic.View):
-    """API for craton"""
+    """API for craton."""
 
     url_regex = r'craton/regions/$'
 
     @rest_utils.ajax()
     def get(self, request, **kwargs):
-        """Gets all Regions"""
+        """Get all Regions."""
         regions = craton.region_list(request)
         return {'items': regions}
 
     @rest_utils.ajax()
     def post(self, request, **kwargs):
-        """Creates a new Region"""
+        """Create a new Region."""
         return craton.region_create(request)
 
     @rest_utils.ajax()
     def put(self, request, **kwargs):
-        """Updates a Region"""
+        """Update a Region."""
         return craton.region_update(request)
 
     @rest_utils.ajax()
     def delete(self, request, **kwargs):
-        """Deletes a Region"""
+        """Delete a Region."""
         return craton.region_delete(request)
 
 
 @urls.register
 class Cells(generic.View):
-    """API for craton"""
+    """API for craton."""
 
     url_regex = r'craton/cells/$'
 
     @rest_utils.ajax()
     def get(self, request, **kwargs):
-        """Gets all Cells"""
+        """Get all Cells."""
         return craton.cell_list(request)
 
     @rest_utils.ajax()
     def post(self, request, **kwargs):
-        """Creates a new Cell"""
+        """Create a new Cell."""
         return craton.cell_create(request)
 
     @rest_utils.ajax()
     def put(self, request, **kwargs):
-        """Updates a Cell"""
+        """Update a Cell."""
         return craton.cell_update(request)
 
     @rest_utils.ajax()
     def delete(self, request, **kwargs):
-        """Deletes a Cell"""
+        """Delete a Cell."""
         return craton.cell_delete(request)
+
 
 @urls.register
 class Hosts(generic.View):
-    """API for craton"""
+    """API for craton."""
 
     url_regex = r'craton/hosts/$'
 
     @rest_utils.ajax()
     def get(self, request, **kwargs):
-        """Gets all Hosts"""
+        """Get all Hosts."""
         return craton.host_list(request)
 
     @rest_utils.ajax()
     def post(self, request, **kwargs):
-        """Creates a new Host"""
+        """Create a new Host."""
         return craton.hosts_create(request)
 
     @rest_utils.ajax()
     def put(self, request, **kwargs):
-        """Updates a Host"""
+        """Update a Host."""
         return craton.hosts_update(request)
 
     @rest_utils.ajax()
     def delete(self, request, **kwargs):
-        """Deletes a Host"""
+        """Delete a Host."""
         return craton.hosts_delete(request)
-

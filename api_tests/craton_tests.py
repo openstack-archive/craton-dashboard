@@ -17,8 +17,10 @@ from craton_dashboard.test import helpers as test
 
 
 class CratonApiTests(test.CratonAPITestCase):
+    """Tests for Craton APIs."""
 
     def test_regions_list(self):
+        """Test for getting all regions."""
         regions = self.craton_regions.list()
         cratonclient = self.stub_cratonclient()
         cratonclient.regions = self.mox.CreateMockAnything()
