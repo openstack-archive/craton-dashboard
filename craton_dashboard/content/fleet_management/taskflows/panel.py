@@ -19,4 +19,4 @@ import horizon
 
 class Taskflows(horizon.Panel):
     name = _('Taskflows')
-    slug = 'fleet.taskflows'
+    slug = 'taskflows'

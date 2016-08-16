@@ -1,6 +1,10 @@
 CHANGES
 =======
 
+* Move the panel dashboard outside of the project section
+* Removed the docstrings from the start of file
+* Removed PEP8 errors
+* More files to ignore
 * [WIP] Added code base for unit testing and code refactoring
 * Added some files and stuff
 * dummy test

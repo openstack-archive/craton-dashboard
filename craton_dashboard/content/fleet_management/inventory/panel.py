@@ -14,9 +14,12 @@
 
 from django.utils.translation import ugettext_lazy as _
 
+from craton_dashboard import dashboard
 import horizon
 
 
 class Inventory(horizon.Panel):
     name = _('Inventory')
-    slug = 'fleet.inventory'
+    slug = 'inventory'
+
+dashboard.FleetManagement.register(Inventory)

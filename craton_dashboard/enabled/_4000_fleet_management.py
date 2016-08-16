@@ -12,12 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# The slug of the dashboard to be added to HORIZON['dashboards']. Required.
+DASHBOARD = 'fleet_management'
+# A dictionary of exception classes to be added to HORIZON['exceptions'].
+ADD_EXCEPTIONS = {}
+# A list of applications to be added to INSTALLED_APPS.
+ADD_INSTALLED_APPS = ['craton_dashboard', ]
 
-PANEL = 'fleet.inventory'
+ADD_ANGULAR_MODULES = ['horizon.dashboard.project.fleet_management']
 
-PANEL_DASHBOARD = 'project'
-
-PANEL_GROUP = 'fleet_management'
-
-ADD_PANEL = (
-    'craton_dashboard.content.fleet_management.inventory.panel.Inventory')
+AUTO_DISCOVER_STATIC_FILES = True

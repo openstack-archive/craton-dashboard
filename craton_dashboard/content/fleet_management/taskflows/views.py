@@ -17,5 +17,5 @@ from django.views import generic
 
 
 class IndexView(generic.TemplateView):
-    template_name = 'project/fleet.taskflows/index.html'
+    template_name = 'fleet_management/taskflows/index.html'
     page_title = _('Taskflows')
