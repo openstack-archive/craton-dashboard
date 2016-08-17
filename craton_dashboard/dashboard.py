@@ -14,10 +14,12 @@
 
 from django.utils.translation import ugettext_lazy as _
 
-PANEL_GROUP = 'fleet_management'
+import horizon
 
-PANEL_GROUP_NAME = _('Fleet Management')
 
-PANEL_GROUP_DASHBOARD = 'project'
+class FleetManagement(horizon.Dashboard):
+    name = _("Fleet Management")
+    slug = "fleet_management"
+    default_panel = 'inventory'
 
-DISABLED = False
+horizon.register(FleetManagement)

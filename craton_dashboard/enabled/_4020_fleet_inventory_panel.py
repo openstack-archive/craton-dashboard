@@ -13,17 +13,11 @@
 # limitations under the License.
 
 
-PANEL = 'fleet.taskflows'
+PANEL = 'inventory'
 
-PANEL_DASHBOARD = 'project'
+PANEL_DASHBOARD = 'fleet_management'
 
-PANEL_GROUP = 'fleet_management'
+PANEL_GROUP = 'default'
 
 ADD_PANEL = (
-    'craton_dashboard.content.fleet_management.taskflows.panel.Taskflows')
-
-ADD_INSTALLED_APPS = ['craton_dashboard', ]
-
-ADD_ANGULAR_MODULES = ['horizon.dashboard.project.fleet_management']
-
-AUTO_DISCOVER_STATIC_FILES = True
+    'craton_dashboard.content.fleet_management.inventory.panel.Inventory')
