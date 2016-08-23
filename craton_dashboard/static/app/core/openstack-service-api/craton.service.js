@@ -18,24 +18,40 @@
   'use strict';
 
   /**
-   * @ngdoc overview
-   * @name 
-   * @description 
+   * @ngdoc service
+   * @name cratonAPI
+   * @param {Object} apiService
+   * @param {Object} toastService
+   * @description provides direct pass through craton with NO abstraction
+   * @returns {Object} the service
    */
 
   angular
     .module('horizon.app.core.openstack-service-api')
-    .factory('horizon.app.core.openstack-service-api.craton', CratonAPI);
+    .factory('horizon.app.core.openstack-service-api.craton', cratonAPI);
 
-  CratonAPI.$inject = [
+  cratonAPI.$inject = [
     'horizon.framework.util.http.service',
     'horizon.framework.widgets.toast.service'
   ];
 
-  function CratonAPI(apiService, toastService) {
+  function cratonAPI(apiService, toastService) {
     var service = {
-
+      getRegions: getRegions
     };
+
+    /**
+     * @name getRegions
+     * @description Gets a list of regions
+     *
+     * @returns {Object} an object with 'items'
+     */
+    function getRegions() {
+      return apiService.get('api/craton/regions')
+          .error(function error() {
+            toastService.add('error', gettext("Unable to get the Craton regions listing"));
+          });
+    }
 
     return service;
   }

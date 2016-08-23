@@ -30,7 +30,7 @@ class Regions(generic.View):
     @rest_utils.ajax()
     def get(self, request, **kwargs):
         """Get all Regions."""
-        regions = craton.region_list(request)
+        regions = craton.region_list(request, **kwargs)
         return {'items': regions}
 
     @rest_utils.ajax()

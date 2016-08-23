@@ -14,13 +14,28 @@
 
 
 from cratonclient.v1 import client as craton_client
+from cratonclient import session as craton_session
+
+from horizon.utils.memoized import memoized  # noqa
+from horizon.utils.memoized import memoized_with_request  # noqa
+
 from openstack_dashboard.api import base
-from six.moves.urllib import request
 
 
-def cratonclient():
-    url = base.url_for(request, 'craton')
-    c = craton_client.Client(session=request.session, url=url)
+def get_auth_params_from_request(request):
+    return(
+        request.user.username,
+        request.user.token.id,
+        request.user.tenant_id,
+        base.url_for(request, 'craton')
+    )
+
+
+@memoized_with_request(get_auth_params_from_request)
+def cratonclient(request_auth_params):
+    username, token, project_id, url = request_auth_params
+    session = craton_session.Session(username=username, token=token)
+    c = craton_client.Client(session=session, url=url)
     return c
 
 
@@ -52,6 +67,7 @@ def region_delete(request, **kwargs):
     pass
 
 
+@memoized
 def region_list(request, **kwargs):
     return cratonclient(request).regions.list(**kwargs)
 
