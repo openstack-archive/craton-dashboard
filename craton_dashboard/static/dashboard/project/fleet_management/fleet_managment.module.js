@@ -38,32 +38,32 @@
     var basePath = $windowProvider.$get().STATIC_URL + 'dashboard/project/fleet_management/';
     $provide.constant('horizon.dashboard.project.fleet_management.basePath', basePath);
 
-    var regions = '/project/regions',
-        taskflows = '/project/fleet/taskflows',
-        alerts = '/project/fleet/alerts',
-        auditor = '/project/fleet/auditor',
-        reporting = '/project/fleet/reporting',
-        inventory = '/project/fleet/inventory';
+    var regions = '/project/regions';
+    var taskflows = '/project/fleet/taskflows';
+    var alerts = '/project/fleet/alerts';
+    var auditor = '/project/fleet/auditor';
+    var reporting = '/project/fleet/reporting';
+    var inventory = '/project/fleet/inventory';
 
     $routeProvider
       .when(regions, {
         templateUrl: basePath + 'regions/index.html'
-     }).
-       when(taskflows, {
+      })
+      .when(taskflows, {
         templateUrl: basePath + 'taskflows/index.html'
-     }).
-       when(alerts, {
+      })
+      .when(alerts, {
         templateUrl: basePath + 'alerts/index.html'
-     }).
-       when(auditor, {
+      })
+      .when(auditor, {
         templateUrl: basePath + 'auditor/index.html'
-     }).
-       when(reporting, {
+      })
+      .when(reporting, {
         templateUrl: basePath + 'reporting/index.html'
-     }).
-       when(inventory, {
+      })
+      .when(inventory, {
         templateUrl: basePath + 'inventory/index.html'
-     });
+      });
   }
 
 })();
