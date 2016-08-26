@@ -128,6 +128,7 @@ module.exports = function(config) {
        * not significant.
        */
       './craton_dashboard/static/app/core/**/*.module.js',
+      './craton_dashboard/static/dashboard/**/**/**/*.module.js',
 
       /**
        * Followed by other JavaScript files that defines angular providers
@@ -136,23 +137,27 @@ module.exports = function(config) {
        * significant.
        */
       './craton_dashboard/static/app/core/**/!(*.spec|*.mock).js',
+      './craton_dashboard/static/dashboard/**/**/**/!(*.spec|*.mock).js',
 
       /**
        * Then, list files for mocks with `mock.js` extension. The order
        * among them should not be significant.
        */
       './craton_dashboard/static/app/core/**/*.mock.js',
+      './craton_dashboard/static/dashboard/**/**/**/*.mock.js',
 
       /**
        * Finally, list files for spec with `spec.js` extension. The order
        * among them should not be significant.
        */
       './craton_dashboard/static/app/core/**/*.spec.js',
+      './craton_dashboard/static/dashboard/**/**/**/*.spec.js',
 
       /**
        * Angular external templates
        */
-      './craton_dashboard/static/app/core/**/*.html'
+      './craton_dashboard/static/app/core/**/*.html',
+      './craton_dashboard/static/dashboard/**/**/**/*.html'
     ],
 
     autoWatch: true,

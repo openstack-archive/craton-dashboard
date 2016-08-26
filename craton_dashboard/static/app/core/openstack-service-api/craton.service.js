@@ -31,11 +31,12 @@
     .factory('horizon.app.core.openstack-service-api.craton', cratonAPI);
 
   cratonAPI.$inject = [
+    '$q',
     'horizon.framework.util.http.service',
     'horizon.framework.widgets.toast.service'
   ];
 
-  function cratonAPI(apiService, toastService) {
+  function cratonAPI($q, apiService, toastService) {
     var service = {
       getRegions: getRegions
     };
@@ -51,8 +52,8 @@
           .error(function error() {
             toastService.add('error', gettext("Unable to get the Craton regions listing"));
           });
-    }
 
+    }
     return service;
   }
 
