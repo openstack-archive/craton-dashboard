@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+* Add JavaScript unit tests code base
 * Move the panel dashboard outside of the project section
 * Removed the docstrings from the start of file
 * Removed PEP8 errors

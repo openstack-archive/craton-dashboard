@@ -13,8 +13,8 @@
 # limitations under the License.
 
 
-from cratonclient.v1 import client as craton_client
 from cratonclient import session as craton_session
+from cratonclient.v1 import client as craton_client
 
 from horizon.utils.memoized import memoized  # noqa
 from horizon.utils.memoized import memoized_with_request  # noqa

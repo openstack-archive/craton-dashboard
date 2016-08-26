@@ -17,5 +17,5 @@ from django.views import generic
 
 
 class IndexView(generic.TemplateView):
-    template_name = 'fleet_management/inventory/index.html'
+    template_name = 'angular.html'
     page_title = _('Inventory')

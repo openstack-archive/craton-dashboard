@@ -17,9 +17,9 @@
 (function() {
   'use strict';
 
-  describe('horizon.dashboard.project.fleet_management', function() {
-    it('should be defined',function test() {
-      expect(angular.module('horizon.dashboard.project.fleet_management')).toBeDefined();
+  describe('horizon.dashboard.project.fleet_management.regions', function () {
+    it('should be defined', function test() {
+      expect(angular.module('horizon.dashboard.project.fleet_management.regions')).toBeDefined();
     });
   });
 
