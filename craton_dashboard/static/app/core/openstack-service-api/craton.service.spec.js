@@ -46,6 +46,20 @@
         method: "get",
         path: "api/craton/regions",
         error: "Unable to get the Craton regions listing"
+      },
+      {
+        func: "getRegion",
+        method: "get",
+        path: "api/craton/regions/spam/",
+        error: "Unable to get the Craton Region",
+        testInput: ["spam"]
+      },
+      {
+        func: "getHosts",
+        method: "get",
+        path: "api/craton/hosts",
+        error: "Unable to retrieve the hosts",
+        data: {}
       }
     ];
 

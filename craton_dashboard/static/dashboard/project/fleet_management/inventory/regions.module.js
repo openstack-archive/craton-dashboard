@@ -29,7 +29,8 @@
 
   angular
     .module('horizon.dashboard.project.fleet_management.regions', ['ngRoute'])
-    .constant('horizon.dashboard.project.fleet_management.resourceType', 'OS::Craton::Region')
+    .constant('horizon.dashboard.project.fleet_management.regions.resourceType',
+      'OS::Craton::Region')
     .run(run)
     .config(config);
 
@@ -37,7 +38,7 @@
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.app.core.openstack-service-api.craton',
     'horizon.dashboard.project.fleet_management.basePath',
-    'horizon.dashboard.project.fleet_management.resourceType'
+    'horizon.dashboard.project.fleet_management.regions.resourceType'
   ];
 
   function run(registry, craton, basePath, cratonResourceType) {

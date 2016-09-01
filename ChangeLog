@@ -1,6 +1,9 @@
 CHANGES
 =======
 
+* Added regions resource table to the Inventory panel
+* Directory for i18n
+* Reordered panels
 * Add JavaScript unit tests code base
 * Move the panel dashboard outside of the project section
 * Removed the docstrings from the start of file

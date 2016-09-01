@@ -27,14 +27,18 @@ def get_auth_params_from_request(request):
         request.user.username,
         request.user.token.id,
         request.user.tenant_id,
-        base.url_for(request, 'craton')
+        base.url_for(request, 'fleetmanagement'),
+        request.session
     )
 
 
 @memoized_with_request(get_auth_params_from_request)
 def cratonclient(request_auth_params):
-    username, token, project_id, url = request_auth_params
-    session = craton_session.Session(username=username, token=token)
+    username, token, project_id, url, session = request_auth_params
+
+    session = craton_session.Session(session=session,
+                                     username=username,
+                                     token=token)
     c = craton_client.Client(session=session, url=url)
     return c
 
@@ -124,8 +128,14 @@ def host_delete(request, **kwargs):
     pass
 
 
+@memoized
 def host_list(request, **kwargs):
-    pass
+    project_id = getattr(kwargs, 'project_id', None)
+    if project_id:
+        delattr(kwargs, 'project_id')
+        return cratonclient(request).hosts.list(project_id=project_id,
+                                                **kwargs)
+    return []
 
 
 def host_show(request, **kwargs):
