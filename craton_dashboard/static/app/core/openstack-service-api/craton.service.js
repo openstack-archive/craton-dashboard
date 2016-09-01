@@ -38,7 +38,9 @@
 
   function cratonAPI($q, apiService, toastService) {
     var service = {
-      getRegions: getRegions
+      getRegions: getRegions,
+      getHosts: getHosts,
+      getRegion: getRegion
     };
 
     /**
@@ -54,6 +56,33 @@
           });
 
     }
+
+    /**
+     * @name getRegion
+     * @param identifier Region Id
+     * @returns {Object} api call result
+     */
+    function getRegion(identifier) {
+      return apiService.get('api/craton/regions/' + identifier + '/')
+          .error(function error() {
+            toastService.add('error', gettext("Unable to get the Craton Region"));
+          });
+    }
+
+    /**
+     * @name getHosts
+     * @description Gets a list of hosts
+     * @param params {Object} query filter params
+     * @returns {Object} an object with 'items'
+     */
+    function getHosts(params) {
+      var config = params ? {'params': params} : {};
+      return apiService.get('api/craton/hosts', config)
+        .error(function error() {
+          toastService.add('error', gettext('Unable to retrieve the hosts'));
+        });
+    }
+
     return service;
   }
 
