@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from cratonclient import session
 from cratonclient.v1 import regions
 
 from openstack_dashboard.test.test_data import utils
@@ -20,22 +21,24 @@ from openstack_dashboard.test.test_data import utils
 def data(TEST):
     URL = 'http://localhost/'
     TEST.craton_regions = utils.TestDataContainer()
-
+    SESSION = session.Session(username="test",
+                              token="testPassword",
+                              project_id='1')
     # Regions
 
-    region_1 = regions.Region(regions.RegionManager(None, URL), {
+    region_1 = regions.Region(regions.RegionManager(SESSION, URL), {
         'id': 1,
         'name': 'Region1',
         'note': 'TestNote',
         'project_id': 1
     })
-    region_2 = regions.Region(regions.RegionManager(None, URL), {
+    region_2 = regions.Region(regions.RegionManager(SESSION, URL), {
         'id': 2,
         'name': 'Region2',
         'note': 'TestNote',
         'project_id': 1
     })
-    region_3 = regions.Region(regions.RegionManager(None, URL), {
+    region_3 = regions.Region(regions.RegionManager(SESSION, URL), {
         'id': 3,
         'name': 'Region3',
         'note': 'TestNote',
