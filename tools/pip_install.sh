@@ -18,6 +18,7 @@
 ZUUL_CLONER=/usr/zuul-env/bin/zuul-cloner
 BRANCH_NAME=master
 horizon_installed=$(echo "import horizon" | python 2>/dev/null ; echo $?)
+cratonclient_installed=$(echo "import cratonclient" | python 2>/dev/null ; echo $?)
 
 set -e
 
@@ -63,6 +64,13 @@ shift
 if [ $horizon_installed -eq 0 ]; then
     echo "ALREADY INSTALLED" > /tmp/tox_install.txt
     echo "Horizon already installed; using existing package"
+else
+    zuul_install || usual_install
+fi
+
+if [ $cratonclient_installed -eq 0 ]; then
+    echo "ALREADY INSTALLED" > /tmp/tox_install.txt
+    echo "cratonclient already installed; using existing package"
 else
     zuul_install || usual_install
 fi

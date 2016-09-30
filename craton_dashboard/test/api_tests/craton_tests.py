@@ -22,8 +22,10 @@ class CratonApiTests(test.CratonAPITestCase):
         regions = self.craton_regions.list()
         cratonclient = self.stub_cratonclient()
         cratonclient.regions = self.mox.CreateMockAnything()
-        cratonclient.regions.list().AndReturn(regions)
+        cratonclient.regions.list(project_id=regions[0].project_id)\
+            .AndReturn(regions)
         self.mox.ReplayAll()
-        result = api.craton.region_list(self.request)
+        result = api.craton.region_list(self.request,
+                                        project_id=regions[0].project_id)
 
         self.assertEqual(len(regions), len(result))
