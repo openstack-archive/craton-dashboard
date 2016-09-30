@@ -47,10 +47,6 @@ usual_install () {
     fi
     $install_cmd -U -e ${HORIZON_PIP_LOCATION}
 
-    if [ -z "$CRATON_CLIENT_PIP_LOCATION"]; then
-        CRATON_CLIENT_PIP_LOCATION="git+https://git.openstack.org/openstack/python-cratonclient@$BRANCH_NAME#egg=python-cratonclient"
-    fi
-    $install_cmd -U -e ${CRATON_CLIENT_PIP_LOCATION}
 }
 
 install_cmd="pip install"
