@@ -13,13 +13,13 @@
 # limitations under the License.
 
 
-from cratonclient import session as craton_session
-from cratonclient.v1 import client as craton_client
+from cratonclient import session as craton_session  # noqa
+from cratonclient.v1 import client as craton_client  # noqa
 
 from horizon.utils.memoized import memoized  # noqa
 from horizon.utils.memoized import memoized_with_request  # noqa
 
-from openstack_dashboard.api import base
+from openstack_dashboard.api import base  # noqa
 
 
 def get_auth_params_from_request(request):
