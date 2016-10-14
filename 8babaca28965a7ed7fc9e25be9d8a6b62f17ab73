@@ -1,0 +1,8 @@
+Code-Review+2: Eddie Ramirez <eddie.ramirez@intel.com>
+Workflow+1: Eddie Ramirez <eddie.ramirez@intel.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Fri, 14 Oct 2016 16:28:06 +0000
+Reviewed-on: https://review.openstack.org/380655
+Project: openstack/craton-dashboard
+Branch: refs/heads/master
