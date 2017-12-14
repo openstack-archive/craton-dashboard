@@ -1,0 +1,4 @@
+- project:
+    name: openstack/craton-dashboard
+    templates:
+       - nodejs4-jobs
