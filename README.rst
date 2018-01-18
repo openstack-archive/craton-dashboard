@@ -1,27 +1,10 @@
-===============================
-Craton UI for Horizon Dashboard
-===============================
+This project is no longer maintained.
 
-Test
-----
+The contents of this repository are still available in the Git
+source code management system.  To see the contents of this
+repository before it reached its end of life, please check out the
+previous commit with "git checkout HEAD^1".
 
-* Python tests: ``./run_test.sh``
-* JS tests:
-
-  1. ``npm install`` (first do ``./run_tests.sh`` to create virtual environment)
-  2. ``npm run lint`` for eslint
-  3. ``npm run test`` for JS unit tests
-
-Install
--------
-
-From http://docs.openstack.org/developer/horizon/tutorials/plugin.html
-
-* plugin is the location of your plugin
-* horizon is the location of horizon
-* package is the complete name of your packaged plugin
-
-1. Run “cd plugin & python setup.py sdist”
-2. Run “cp -rv enabled horizon/openstack_dashboard/local/”
-3. Run “horizon/tools/with_venv.sh pip install dist/package.tar.gz”
-4. Restart Apache or your Django test server
+For any further questions, please email
+openstack-dev@lists.openstack.org or join #openstack-dev on
+Freenode.
