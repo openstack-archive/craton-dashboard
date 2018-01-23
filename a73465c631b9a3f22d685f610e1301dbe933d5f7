@@ -1,0 +1,8 @@
+Code-Review+2: Sulochan Acharya <sulochan@gmail.com>
+Workflow+1: Sulochan Acharya <sulochan@gmail.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 23 Jan 2018 15:35:44 +0000
+Reviewed-on: https://review.openstack.org/535339
+Project: openstack/craton-dashboard
+Branch: refs/heads/master
